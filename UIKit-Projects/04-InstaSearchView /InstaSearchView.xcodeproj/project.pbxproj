@@ -15,6 +15,10 @@
 		948CD2442812F01C003DC0C4 /* InstaSearchViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948CD2432812F01C003DC0C4 /* InstaSearchViewTests.swift */; };
 		948CD24E2812F01C003DC0C4 /* InstaSearchViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948CD24D2812F01C003DC0C4 /* InstaSearchViewUITests.swift */; };
 		948CD2502812F01C003DC0C4 /* InstaSearchViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948CD24F2812F01C003DC0C4 /* InstaSearchViewUITestsLaunchTests.swift */; };
+		F97A19D82D7FE51A00502C72 /* NewFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97A19D72D7FE51A00502C72 /* NewFeedViewController.swift */; };
+		F97A19DA2D8013EA00502C72 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97A19D92D8013EA00502C72 /* FeedCell.swift */; };
+		F9E60A292D7DB0C300D42009 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E60A282D7DB0C300D42009 /* SearchViewController.swift */; };
+		F9E60A2B2D7DB28D00D42009 /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E60A2A2D7DB28D00D42009 /* ResultCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		948CD2492812F01C003DC0C4 /* InstaSearchViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaSearchViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		948CD24D2812F01C003DC0C4 /* InstaSearchViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaSearchViewUITests.swift; sourceTree = "<group>"; };
 		948CD24F2812F01C003DC0C4 /* InstaSearchViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaSearchViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F97A19D72D7FE51A00502C72 /* NewFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedViewController.swift; sourceTree = "<group>"; };
+		F97A19D92D8013EA00502C72 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		F9E60A282D7DB0C300D42009 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F9E60A2A2D7DB28D00D42009 /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,10 @@
 				948CD2352812F01B003DC0C4 /* Assets.xcassets */,
 				948CD2372812F01B003DC0C4 /* LaunchScreen.storyboard */,
 				948CD23A2812F01B003DC0C4 /* Info.plist */,
+				F97A19D92D8013EA00502C72 /* FeedCell.swift */,
+				F9E60A282D7DB0C300D42009 /* SearchViewController.swift */,
+				F97A19D72D7FE51A00502C72 /* NewFeedViewController.swift */,
+				F9E60A2A2D7DB28D00D42009 /* ResultCell.swift */,
 			);
 			path = InstaSearchView;
 			sourceTree = "<group>";
@@ -188,7 +200,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
-				LastUpgradeCheck = 1330;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					948CD2282812F01B003DC0C4 = {
 						CreatedOnToolsVersion = 13.3.1;
@@ -255,8 +267,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9E60A292D7DB0C300D42009 /* SearchViewController.swift in Sources */,
 				948CD22D2812F01B003DC0C4 /* AppDelegate.swift in Sources */,
+				F9E60A2B2D7DB28D00D42009 /* ResultCell.swift in Sources */,
 				948CD22F2812F01B003DC0C4 /* SceneDelegate.swift in Sources */,
+				F97A19D82D7FE51A00502C72 /* NewFeedViewController.swift in Sources */,
+				F97A19DA2D8013EA00502C72 /* FeedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +364,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -408,6 +425,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -485,7 +503,6 @@
 		948CD2572812F01C003DC0C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -505,7 +522,6 @@
 		948CD2582812F01C003DC0C4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -525,7 +541,6 @@
 		948CD25A2812F01C003DC0C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C98APEMDUR;
@@ -543,7 +558,6 @@
 		948CD25B2812F01C003DC0C4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C98APEMDUR;
